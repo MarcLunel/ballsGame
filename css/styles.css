@@ -1,3 +1,7 @@
+/* VARIABLES */
+
+
+/* HEADER */
 body{
 	background-color: #222222;
 	font-family: Verdana;
@@ -6,11 +10,10 @@ body{
 .btn-container{
 	width: 100%;
 	text-align: center;
-	background-color: red;
 }
 
 button{
-	position: absolute;
+	position: relative;
 	padding: 15px;
 	background-color: #27ae60;
 	border: none;
@@ -28,4 +31,21 @@ button:hover{
 h1{
 	color:#FFF;
 	text-align: center;
+}
+
+
+/* BALLS */
+.ball{
+	position: absolute;
+	width: 100px;
+	height: 100px;
+	border-radius: 100px;
+	background-color: #3498db;
+}
+
+.balls-container{
+	margin: 50px;
+	min-height: 600px;
+	border:4px solid #e74c3c;
+	border-radius: 2px;
 }
