@@ -1,3 +1,4 @@
+// CREATE BALLS WITH BUTTON
 $clic = false;
 
 $(".btn-generator").click(function(){
