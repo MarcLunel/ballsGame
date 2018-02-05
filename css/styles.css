@@ -1,0 +1,31 @@
+body{
+	background-color: #222222;
+	font-family: Verdana;
+}
+
+.btn-container{
+	width: 100%;
+	text-align: center;
+	background-color: red;
+}
+
+button{
+	position: absolute;
+	padding: 15px;
+	background-color: #27ae60;
+	border: none;
+	border-radius: 2px;
+	cursor: pointer;
+	font-size: 20px;
+	color:#FFF;
+	transition: 0.2s;
+}
+
+button:hover{
+	background-color: #2ecc71;
+}
+
+h1{
+	color:#FFF;
+	text-align: center;
+}
