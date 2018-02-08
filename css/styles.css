@@ -1,13 +1,19 @@
 /* VARIABLES */
+/* FUNCTIONS */
 /* HEADER */
+/* line 13, styles.scss */
 body {
   background-color: #222222;
-  font-family: Verdana; }
+  font-family: Verdana;
+}
 
+/* line 18, styles.scss */
 .btn-container {
   width: 100%;
-  text-align: center; }
+  text-align: center;
+}
 
+/* line 23, styles.scss */
 .btn-generator {
   position: relative;
   padding: 15px;
@@ -17,28 +23,44 @@ body {
   cursor: pointer;
   font-size: 20px;
   color: #FFF;
-  transition: 0.2s; }
-  .btn-generator:hover {
-    background-color: #2ecc71; }
+  transition: 0.2s;
+}
+/* line 33, styles.scss */
+.btn-generator:hover {
+  background-color: #2ecc71;
+}
 
+/* line 42, styles.scss */
 h1 {
   color: #FFF;
-  text-align: center; }
+  text-align: center;
+}
 
 /* BALLS */
+/* line 49, styles.scss */
 .ball {
   position: absolute;
   width: 100px;
   height: 100px;
   border-radius: 100px;
-  background-color: #3498db; }
+  content: false;
+  /*@if $active != false {*/
+  background-color: #3498db;
+  /*background-color: nth($colors, random(length($colors)));*/
+  /*$active : false;*/
+  /*}*/
+  /*#3498db*/
+}
 
+/* line 63, styles.scss */
 .balls-container {
   margin: 50px;
   min-height: 600px;
   border: 4px solid #e74c3c;
-  border-radius: 2px; }
+  border-radius: 2px;
+}
 
+/* line 70, styles.scss */
 .beginning {
   margin: 25px;
   z-index: 1;
@@ -46,6 +68,5 @@ h1 {
   width: 50px;
   height: 50px;
   border-radius: 50px;
-  background-color: #ffffff; }
-
-/*# sourceMappingURL=styles.css.map */
+  background-color: #ffffff;
+}
