@@ -1,13 +1,9 @@
 @import "compass";
 
 /* VARIABLES */
-$colors : #3498db, #3498db, #3498db;
-$active : false ;
+$colors : blue, #000, #3498db;
 
 /* FUNCTIONS */
-@function randomColor($colors){
-	@return nth($colors, random(length($colors))) ;
-}
 
 /* HEADER */
 body{
@@ -33,9 +29,6 @@ body{
 	&:hover{
 		background-color: #2ecc71;
 	}
-	&:focus{
-		$active : false;
-	}
 }
 
 
@@ -51,13 +44,6 @@ h1{
 	width: 100px;
 	height: 100px;
 	border-radius: 100px;
-	content: $active;
-	/*@if $active != false {*/
-		background-color: randomColor($colors);
-		/*background-color: nth($colors, random(length($colors)));*/
-		/*$active : false;*/
-	/*}*/
-	/*#3498db*/
 }
 
 .balls-container{

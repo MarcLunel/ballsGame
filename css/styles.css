@@ -1,19 +1,19 @@
 /* VARIABLES */
 /* FUNCTIONS */
 /* HEADER */
-/* line 13, styles.scss */
+/* line 9, styles.scss */
 body {
   background-color: #222222;
   font-family: Verdana;
 }
 
-/* line 18, styles.scss */
+/* line 14, styles.scss */
 .btn-container {
   width: 100%;
   text-align: center;
 }
 
-/* line 23, styles.scss */
+/* line 19, styles.scss */
 .btn-generator {
   position: relative;
   padding: 15px;
@@ -25,34 +25,27 @@ body {
   color: #FFF;
   transition: 0.2s;
 }
-/* line 33, styles.scss */
+/* line 29, styles.scss */
 .btn-generator:hover {
   background-color: #2ecc71;
 }
 
-/* line 42, styles.scss */
+/* line 35, styles.scss */
 h1 {
   color: #FFF;
   text-align: center;
 }
 
 /* BALLS */
-/* line 49, styles.scss */
+/* line 42, styles.scss */
 .ball {
   position: absolute;
   width: 100px;
   height: 100px;
   border-radius: 100px;
-  content: false;
-  /*@if $active != false {*/
-  background-color: #3498db;
-  /*background-color: nth($colors, random(length($colors)));*/
-  /*$active : false;*/
-  /*}*/
-  /*#3498db*/
 }
 
-/* line 63, styles.scss */
+/* line 49, styles.scss */
 .balls-container {
   margin: 50px;
   min-height: 600px;
@@ -60,7 +53,7 @@ h1 {
   border-radius: 2px;
 }
 
-/* line 70, styles.scss */
+/* line 56, styles.scss */
 .beginning {
   margin: 25px;
   z-index: 1;
