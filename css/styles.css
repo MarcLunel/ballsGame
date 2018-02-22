@@ -1,65 +1,46 @@
-/* VARIABLES */
-/* FUNCTIONS */
-/* HEADER */
-/* line 9, styles.scss */
-body {
-  background-color: #222222;
-  font-family: Verdana;
-}
+/*
+Error: Invalid CSS after "$colors : ": expected expression (e.g. 1px, bold), was ".ball[backgroun..."
+        on line 4 of C:/Users/Marc/Desktop/DeveloppementWeb/ballsGame/css/styles.scss
 
-/* line 14, styles.scss */
-.btn-container {
-  width: 100%;
-  text-align: center;
-}
+1: @import "compass";
+2: 
+3: /* VARIABLES *\/
+4: $colors : .ball[background-color];
+5: 
+6: /* FUNCTIONS *\/
+7: 
+8: /* HEADER *\/
+9: body{
 
-/* line 19, styles.scss */
-.btn-generator {
-  position: relative;
-  padding: 15px;
-  background-color: #27ae60;
-  border: none;
-  border-radius: 2px;
-  cursor: pointer;
-  font-size: 20px;
-  color: #FFF;
-  transition: 0.2s;
-}
-/* line 29, styles.scss */
-.btn-generator:hover {
-  background-color: #2ecc71;
-}
-
-/* line 35, styles.scss */
-h1 {
-  color: #FFF;
-  text-align: center;
-}
-
-/* BALLS */
-/* line 42, styles.scss */
-.ball {
-  position: absolute;
-  width: 100px;
-  height: 100px;
-  border-radius: 100px;
-}
-
-/* line 49, styles.scss */
-.balls-container {
-  margin: 50px;
-  min-height: 600px;
-  border: 4px solid #e74c3c;
-  border-radius: 2px;
-}
-
-/* line 56, styles.scss */
-.beginning {
-  margin: 25px;
-  z-index: 1;
-  position: absolute;
-  width: 50px;
-  height: 50px;
-  border-radius: 50px;
-  background-color: #ffffff;
-}
+Backtrace:
+C:/Users/Marc/Desktop/DeveloppementWeb/ballsGame/css/styles.scss:4
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:1207:in `expected'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/script/lexer.rb:229:in `expected!'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/script/parser.rb:710:in `assert_expr'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/script/parser.rb:75:in `parse'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:1063:in `sass_script'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:630:in `variable'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:684:in `block_child'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:677:in `block_contents'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:125:in `stylesheet'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/scss/parser.rb:41:in `parse'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/engine.rb:409:in `_to_tree'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/engine.rb:284:in `render'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:17:in `block in render'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:29:in `with_import_scope'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/compass-import-once-1.0.5/lib/compass/import-once/engine.rb:16:in `render'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:494:in `update_stylesheet'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:215:in `block in update_stylesheets'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `each'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:209:in `update_stylesheets'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:473:in `on_file_changed'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/lib/sass/plugin/compiler.rb:331:in `block in watch'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/vendor/listen/lib/listen/listener.rb:252:in `on_change'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/vendor/listen/lib/listen/listener.rb:290:in `block in initialize_adapter'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/vendor/listen/lib/listen/adapters/polling.rb:48:in `poll_changed_directories'
+C:/Ruby24-x64/lib/ruby/gems/2.4.0/gems/sass-3.4.25/vendor/listen/lib/listen/adapter.rb:299:in `block in start_poller'
+*/
+body:before {
+  white-space: pre;
+  font-family: monospace;
+  content: "Error: Invalid CSS after \"$colors : \": expected expression (e.g. 1px, bold), was \".ball[backgroun...\"\A         on line 4 of C:/Users/Marc/Desktop/DeveloppementWeb/ballsGame/css/styles.scss\A \A 1: @import \"compass\";\A 2: \A 3: /* VARIABLES */\A 4: $colors : .ball[background-color];\A 5: \A 6: /* FUNCTIONS */\A 7: \A 8: /* HEADER */\A 9: body{"; }
