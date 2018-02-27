@@ -56,45 +56,46 @@ h1 {
   }*/
 }
 
-/* line 70, styles.scss */
+/* Add styles to zones and balls depending on colors */
+/* line 71, styles.scss */
 .ball[dataBg="#82ccdd"] {
   background-color: #82ccdd;
 }
 
-/* line 74, styles.scss */
+/* line 75, styles.scss */
 .end[dataBg="#82ccdd"] {
   background-color: #82ccdd;
   left: 0%;
 }
 
-/* line 70, styles.scss */
+/* line 71, styles.scss */
 .ball[dataBg="#b71540"] {
   background-color: #b71540;
 }
 
-/* line 74, styles.scss */
+/* line 75, styles.scss */
 .end[dataBg="#b71540"] {
   background-color: #b71540;
   left: 25%;
 }
 
-/* line 70, styles.scss */
+/* line 71, styles.scss */
 .ball[dataBg="#f6b93b"] {
   background-color: #f6b93b;
 }
 
-/* line 74, styles.scss */
+/* line 75, styles.scss */
 .end[dataBg="#f6b93b"] {
   background-color: #f6b93b;
   left: 50%;
 }
 
-/* line 70, styles.scss */
+/* line 71, styles.scss */
 .ball[dataBg="#000"] {
   background-color: #000;
 }
 
-/* line 74, styles.scss */
+/* line 75, styles.scss */
 .end[dataBg="#000"] {
   background-color: #000;
   left: 75%;
@@ -128,4 +129,13 @@ h1 {
   display: inline-block;
   bottom: 0;
   clear: both;
+  text-align: center;
+  vertical-align: middle;
+  line-height: 150px;
+}
+
+/* line 112, styles.scss */
+.end span {
+  color: #FFF;
+  font-size: 3rem;
 }

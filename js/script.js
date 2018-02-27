@@ -9,17 +9,18 @@ $colors = [$cyan, $magenta, $yellow, $black];
 
 $(".btn-generator").click(function(){
 	function backgroundColorBall(array){
-		var minNumber = 0;
-	    var maxNumber = array.length - 1;
-	    var randomNumber = Math.floor(Math.random() * (maxNumber + 1) + minNumber);
-	    var color = array[randomNumber];
-	    return color;
+		$minNumber = 0;
+	    $maxNumber = array.length - 1;
+	    $randomNumber = Math.floor(Math.random() * ($maxNumber + 1) + $minNumber);
+	    $color = array[$randomNumber];
+	    return $color;
 	}
 	$color = backgroundColorBall($colors);
 	$clic = true;
 	if($clic == true){
 		$('.balls-container').prepend('<div class="ball" dataBg="' + $color + '" ></div>');
 		$clic = false;
+		moveBall($color);
 	}
 })
 
@@ -28,6 +29,17 @@ $(".btn-generator").click(function(){
 $i = 0;
 $length = $colors.length;
 while ($i < $length) {
-	$('.balls-container').append('<div class="end" dataBg="' + $colors[$i] + '" ></div>');
+	$('.balls-container').append('<div class="end" dataBg="' + $colors[$i] + '" ><span>0</span></div>');
 	$i++;
+}
+
+
+// MOVE BALLS
+function moveBall($color){
+	$widthZone = $('.end').width();
+	$heightZone = $('.end').height();
+	$widthBall = $('.ball').width();
+	$positionLeft = $('.end[dataBg="' + $color + '"]').position().left + ($widthZone/2) - ($widthBall/2) + "px";
+	$positionTop = $('.end[dataBg="' + $color + '"]').position().top + ($heightZone/2) - ($widthBall/2) + "px";
+	$('.ball[dataBg="' + $color + '"]').animate({left:$positionLeft, top:$positionTop}, 1000);
 }
