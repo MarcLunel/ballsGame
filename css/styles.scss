@@ -51,17 +51,6 @@ h1{
 	width: $width;
 	height: 100px;
 	border-radius: 100px;
-	/*@if($colors == #000){
-		@keyframes move {
-			0% { left:0px; }
-			100% { left: 1000px; }
-		}
-		animation: move 5s linear;
-		-webkit-animation: move 5s linear;
-	}*/
-	/*@if($width == 100px){
-		width: 500px;
-	}*/
 }
 
 /* Add styles to zones and balls depending on colors */
@@ -97,6 +86,19 @@ $left : 0;
 	background-color: #ffffff;
 }
 
+/* VICTORY */
+.victory-window{
+	position: absolute;
+	text-align: center;
+	margin-left:50%;
+	margin-top:100px;
+	transform: translateX(-50%);
+	padding: 50px;
+	font-size: 50px;
+	color: #FFF;
+}
+
+/* ZONES */
 .end{
 	position: absolute;
 	width:25%;
@@ -107,9 +109,8 @@ $left : 0;
 	text-align: center;
 	vertical-align: middle;
 	line-height: 150px;
-}
-
-.end span{
-	color:#FFF;
-	font-size: 3rem;
+	span{
+		color:#FFF;
+		font-size: 3rem;
+	}
 }

@@ -43,65 +43,54 @@ h1 {
   width: 100px;
   height: 100px;
   border-radius: 100px;
-  /*@if($colors == #000){
-  	@keyframes move {
-  		0% { left:0px; }
-  		100% { left: 1000px; }
-  	}
-  	animation: move 5s linear;
-  	-webkit-animation: move 5s linear;
-  }*/
-  /*@if($width == 100px){
-  	width: 500px;
-  }*/
 }
 
 /* Add styles to zones and balls depending on colors */
-/* line 71, styles.scss */
+/* line 60, styles.scss */
 .ball[dataBg="#82ccdd"] {
   background-color: #82ccdd;
 }
 
-/* line 75, styles.scss */
+/* line 64, styles.scss */
 .end[dataBg="#82ccdd"] {
   background-color: #82ccdd;
   left: 0%;
 }
 
-/* line 71, styles.scss */
+/* line 60, styles.scss */
 .ball[dataBg="#b71540"] {
   background-color: #b71540;
 }
 
-/* line 75, styles.scss */
+/* line 64, styles.scss */
 .end[dataBg="#b71540"] {
   background-color: #b71540;
   left: 25%;
 }
 
-/* line 71, styles.scss */
+/* line 60, styles.scss */
 .ball[dataBg="#f6b93b"] {
   background-color: #f6b93b;
 }
 
-/* line 75, styles.scss */
+/* line 64, styles.scss */
 .end[dataBg="#f6b93b"] {
   background-color: #f6b93b;
   left: 50%;
 }
 
-/* line 71, styles.scss */
+/* line 60, styles.scss */
 .ball[dataBg="#000"] {
   background-color: #000;
 }
 
-/* line 75, styles.scss */
+/* line 64, styles.scss */
 .end[dataBg="#000"] {
   background-color: #000;
   left: 75%;
 }
 
-/* line 82, styles.scss */
+/* line 71, styles.scss */
 .balls-container {
   margin: 50px;
   min-height: 500px;
@@ -110,7 +99,7 @@ h1 {
   position: relative;
 }
 
-/* line 90, styles.scss */
+/* line 79, styles.scss */
 .beginning {
   margin: 25px;
   z-index: 1;
@@ -121,7 +110,21 @@ h1 {
   background-color: #ffffff;
 }
 
-/* line 100, styles.scss */
+/* VICTORY */
+/* line 90, styles.scss */
+.victory-window {
+  position: absolute;
+  text-align: center;
+  margin-left: 50%;
+  margin-top: 100px;
+  transform: translateX(-50%);
+  padding: 50px;
+  font-size: 50px;
+  color: #FFF;
+}
+
+/* ZONES */
+/* line 102, styles.scss */
 .end {
   position: absolute;
   width: 25%;
@@ -133,7 +136,6 @@ h1 {
   vertical-align: middle;
   line-height: 150px;
 }
-
 /* line 112, styles.scss */
 .end span {
   color: #FFF;

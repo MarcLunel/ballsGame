@@ -6,6 +6,8 @@ $magenta = '#b71540';
 $yellow = '#f6b93b';
 $black = '#000'
 $colors = [$cyan, $magenta, $yellow, $black];
+$stop = false;
+$finalScore = 5;
 
 $(".btn-generator").click(function(){
 	function backgroundColorBall(array){
@@ -15,13 +17,16 @@ $(".btn-generator").click(function(){
 	    $color = array[$randomNumber];
 	    return $color;
 	}
-	$color = backgroundColorBall($colors);
-	$clic = true;
-	if($clic == true){
-		$('.balls-container').prepend('<div class="ball" dataBg="' + $color + '" ></div>');
-		$clic = false;
-		moveBall($color);
-		addPoint($color);
+	if($stop!=true){
+		$color = backgroundColorBall($colors);
+		$clic = true;
+		if($clic == true){
+			$('.balls-container').prepend('<div class="ball" dataBg="' + $color + '" ></div>');
+			$clic = false;
+			moveBall($color);
+			addPoint($color);
+			victory($color);
+		}
 	}
 })
 
@@ -53,4 +58,14 @@ function addPoint($color){
 	$more = $value + 1;
 	$span.data("point",$more);
 	$span.html($more);
+}
+
+
+// SHOW WHO WIN
+function victory($color){
+	$value = $('.end[dataBg="' + $color + '"] span[data-point]').data("point");
+	if($value==$finalScore){
+		$('.victory-window').css({'background-color':$color}).append('<span>This color win !</span>');
+		$stop = true;
+	}
 }
