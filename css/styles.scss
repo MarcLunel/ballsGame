@@ -6,8 +6,9 @@ $magenta : #b71540;
 $yellow : #f6b93b;
 $black : #000;
 $purple : #6D214F;
-$width : 100px;
 $colors: ($cyan, $magenta, $yellow, $black);
+$widthBall : 100px;
+$widthZone : (100/length($colors)) + '%';
 
 
 /* FUNCTIONS */
@@ -48,7 +49,9 @@ h1{
 /* BALLS */
 .ball{
 	position: absolute;
-	width: $width;
+	left:50%;
+	transform: translateX(-50%);
+	width: $widthBall;
 	height: 100px;
 	border-radius: 100px;
 }
@@ -56,7 +59,7 @@ h1{
 /* Add styles to zones and balls depending on colors */
 $left : 0;
 @each $color in $colors{
-	$move : 25 * $left + '%';
+	$move : (100/length($colors)) * $left + '%';
 	.ball[dataBg="#{$color}"]{
 		background-color: #{$color};
 	}
@@ -77,6 +80,8 @@ $left : 0;
 }
 
 .beginning{
+	left:50%;
+	transform: translateX(-100%);
 	margin: 25px;
 	z-index: 1;
 	position: absolute;
@@ -101,7 +106,7 @@ $left : 0;
 /* ZONES */
 .end{
 	position: absolute;
-	width:25%;
+	width: #{$widthZone};
 	height:150px;
 	display:inline-block;
 	bottom:0;

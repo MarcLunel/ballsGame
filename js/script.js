@@ -4,10 +4,10 @@ $clic = false;
 $cyan = '#82ccdd';
 $magenta = '#b71540';
 $yellow = '#f6b93b';
-$black = '#000'
+$black = '#000';
 $colors = [$cyan, $magenta, $yellow, $black];
 $stop = false;
-$finalScore = 5;
+$finalScore = 10;
 
 $(".btn-generator").click(function(){
 	function backgroundColorBall(array){

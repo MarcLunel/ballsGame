@@ -1,19 +1,19 @@
 /* VARIABLES */
 /* FUNCTIONS */
 /* HEADER */
-/* line 16, styles.scss */
+/* line 17, styles.scss */
 body {
   background-color: #222222;
   font-family: Verdana;
 }
 
-/* line 21, styles.scss */
+/* line 22, styles.scss */
 .btn-container {
   width: 100%;
   text-align: center;
 }
 
-/* line 26, styles.scss */
+/* line 27, styles.scss */
 .btn-generator {
   position: relative;
   padding: 15px;
@@ -25,72 +25,74 @@ body {
   color: #FFF;
   transition: 0.2s;
 }
-/* line 36, styles.scss */
+/* line 37, styles.scss */
 .btn-generator:hover {
   background-color: #2ecc71;
 }
 
-/* line 42, styles.scss */
+/* line 43, styles.scss */
 h1 {
   color: #FFF;
   text-align: center;
 }
 
 /* BALLS */
-/* line 49, styles.scss */
+/* line 50, styles.scss */
 .ball {
   position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
   width: 100px;
   height: 100px;
   border-radius: 100px;
 }
 
 /* Add styles to zones and balls depending on colors */
-/* line 60, styles.scss */
+/* line 63, styles.scss */
 .ball[dataBg="#82ccdd"] {
   background-color: #82ccdd;
 }
 
-/* line 64, styles.scss */
+/* line 67, styles.scss */
 .end[dataBg="#82ccdd"] {
   background-color: #82ccdd;
   left: 0%;
 }
 
-/* line 60, styles.scss */
+/* line 63, styles.scss */
 .ball[dataBg="#b71540"] {
   background-color: #b71540;
 }
 
-/* line 64, styles.scss */
+/* line 67, styles.scss */
 .end[dataBg="#b71540"] {
   background-color: #b71540;
   left: 25%;
 }
 
-/* line 60, styles.scss */
+/* line 63, styles.scss */
 .ball[dataBg="#f6b93b"] {
   background-color: #f6b93b;
 }
 
-/* line 64, styles.scss */
+/* line 67, styles.scss */
 .end[dataBg="#f6b93b"] {
   background-color: #f6b93b;
   left: 50%;
 }
 
-/* line 60, styles.scss */
+/* line 63, styles.scss */
 .ball[dataBg="#000"] {
   background-color: #000;
 }
 
-/* line 64, styles.scss */
+/* line 67, styles.scss */
 .end[dataBg="#000"] {
   background-color: #000;
   left: 75%;
 }
 
-/* line 71, styles.scss */
+/* line 74, styles.scss */
 .balls-container {
   margin: 50px;
   min-height: 500px;
@@ -99,8 +101,10 @@ h1 {
   position: relative;
 }
 
-/* line 79, styles.scss */
+/* line 82, styles.scss */
 .beginning {
+  left: 50%;
+  transform: translateX(-100%);
   margin: 25px;
   z-index: 1;
   position: absolute;
@@ -111,7 +115,7 @@ h1 {
 }
 
 /* VICTORY */
-/* line 90, styles.scss */
+/* line 95, styles.scss */
 .victory-window {
   position: absolute;
   text-align: center;
@@ -124,7 +128,7 @@ h1 {
 }
 
 /* ZONES */
-/* line 102, styles.scss */
+/* line 107, styles.scss */
 .end {
   position: absolute;
   width: 25%;
@@ -136,7 +140,7 @@ h1 {
   vertical-align: middle;
   line-height: 150px;
 }
-/* line 112, styles.scss */
+/* line 117, styles.scss */
 .end span {
   color: #FFF;
   font-size: 3rem;
