@@ -1,5 +1,4 @@
-// CREATE BALLS AND THEM COLORS WITH BUTTON
-// I use JS because random function of SASS doesn't work
+// VARIABLES
 $clic = false;
 $cyan = '#82ccdd';
 $magenta = '#b71540';
@@ -7,16 +6,11 @@ $yellow = '#f6b93b';
 $black = '#000';
 $colors = [$cyan, $magenta, $yellow, $black];
 $stop = false;
-$finalScore = 10;
+$finalScore = 5;
 
+
+// CREATE BALLS AND HAVE FUN
 $(".btn-generator").click(function(){
-	function backgroundColorBall(array){
-		$minNumber = 0;
-	    $maxNumber = array.length - 1;
-	    $randomNumber = Math.floor(Math.random() * ($maxNumber + 1) + $minNumber);
-	    $color = array[$randomNumber];
-	    return $color;
-	}
 	if($stop!=true){
 		$color = backgroundColorBall($colors);
 		$clic = true;
@@ -27,8 +21,20 @@ $(".btn-generator").click(function(){
 			addPoint($color);
 			victory($color);
 		}
+	}else if($stop==true){
+		resetGame();
 	}
 })
+
+
+// GENERATE BALLS COLORS WITH BUTTON
+function backgroundColorBall(array){
+	$minNumber = 0;
+    $maxNumber = array.length - 1;
+    $randomNumber = Math.floor(Math.random() * ($maxNumber + 1) + $minNumber);
+    $color = array[$randomNumber];
+    return $color;
+}
 
 
 // CREATE ZONES
@@ -67,5 +73,16 @@ function victory($color){
 	if($value==$finalScore){
 		$('.victory-window').css({'background-color':$color}).append('<span>This color win !</span>');
 		$stop = true;
+		$('button').html('Reset');
 	}
+}
+
+
+// RESET GAME
+function resetGame(){
+	$span = $('.end[dataBg] span').data("point", 0).html(0);
+	$('.victory-window').html('').removeAttr("style");
+	$('button').html('Generate');
+	$('.ball').remove();
+	$stop = false;
 }
